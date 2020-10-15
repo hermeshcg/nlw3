@@ -2,8 +2,9 @@
 
 Aplicação desenvolvida durante a next level week 3
 
+-> NodeJS
+
 -> ReactJs 
 
 -> ReactNative 
 
--> NodeJS
