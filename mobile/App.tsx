@@ -6,6 +6,7 @@ import {
   Nunito_800ExtraBold,
 } from '@expo-google-fonts/nunito';
 import Routes from './src/routes';
+import { StatusBar } from 'react-native';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -18,5 +19,10 @@ export default function App() {
     return null;
   }
 
-  return <Routes />;
+  return (
+    <>
+      <Routes />
+      <StatusBar barStyle="dark-content" backgroundColor="#15b6d6" />
+    </>
+  );
 }
