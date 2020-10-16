@@ -9,8 +9,8 @@ import {
   Linking,
 } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
-import { Feather, FontAwesome } from '@expo/vector-icons';
-import { RectButton, TouchableOpacity } from 'react-native-gesture-handler';
+import { Feather } from '@expo/vector-icons';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 import { useRoute } from '@react-navigation/native';
 
 import mapMarkerImg from '../images/map-marker.png';
@@ -38,6 +38,7 @@ interface Orphanage {
 export default function OrphanageDetails() {
   const [orphanage, setOrphanage] = useState<Orphanage>();
   const route = useRoute();
+
 
   const params = route.params as OrphanageDetailsRouteParams;
 
@@ -137,7 +138,7 @@ export default function OrphanageDetails() {
           ) : (
             <View style={[styles.scheduleItem, styles.scheduleItemRed]}>
               <Feather name="info" size={40} color="#Ff669D" />
-              <Text style={[styles.scheduleText, styles.scheduleTextGreen]}>
+              <Text style={[styles.scheduleText, styles.scheduleTextRed]}>
                 Não atendemos fim de semana
               </Text>
             </View>
